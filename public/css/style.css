@@ -4,6 +4,9 @@
 
 /* Basic CSS starts */
 
+.testTC{
+  color:#000;
+}
 body{
 	background:#004C97;
 	font-family: 'Open Sans', sans-serif;
