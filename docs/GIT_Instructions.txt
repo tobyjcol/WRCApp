@@ -1,0 +1,10 @@
+Following is the process to merge code, please follow:
+
+1, Work in your own branch or develop 
+2. When you have something to merge back make a Pull Request (to dev branch)
+3. Code Revieww (can be done in GIT itself on the PR) 
+4. Merge by reviewer.
+
+Important: Every one can have the rights to merge the PR, but the person who sent the PR should not merge their own PR.
+
+Whenever there is a PR we will get the mail as well as this chat window can be notified so that we can review and merge it.
