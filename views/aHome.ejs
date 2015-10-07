@@ -5,17 +5,16 @@
 <meta name="description" content="Samaritan House">
 <meta name="keywords" content="Samaritan House">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
-<link href="/fullcalendar.css" rel='stylesheet' />
-<link href="/fullcalendar.print.css" rel='stylesheet' media='print' />
-<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-<script src="/lib/moment.min.js"></script>
-<script src="/scripts/jquery.js"></script>
-<script src="/fullcalendar.min.js"></script>
+<link href="calendar/fullcalendar.css" rel='stylesheet' />
+<link href="calendar/fullcalendar.print.css" rel='stylesheet' media='print' />
+<script src="calendar/lib/moment.min.js"></script>
+
+
 <style>
+
 .fc-content{
 height:50px;
 font-size:18px;
@@ -24,48 +23,7 @@ vertical-align: middle;
 padding:15px;
 }
 .fc-time{display:none}
-</style>
-<script>
 
-	$(document).ready(function() {
-	
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title'//,
-				//right: 'month,agendaWeek,agendaDay'
-			},
-			//defaultDate: '2015-02-12',
-			editable: false,
-			selectable:true,
-			eventLimit: true, // allow "more" link when too many events
-			 eventClick: function(calEvent, jsEvent, view) {
-			alert(calEvent.start);
-			var start=calEvent.start;
-			var uri="/renderevents?id="+ start;						
-					window.location.href =uri ;
-			 },
-			eventAfterRender: function (event,element, cell) {
-				if(event.title-event.NewCount>0){
-				element.find('.fc-content').append("<div style=' position: relative; width: 15px;height: 15px;float:right;background-color: #E60000;border-radius: 10px;'></div>")
-				}
-			},
-			events: {
-				url: '/getcalendar',
-				error: function() {
-					$('#script-warning').show();
-				},				
-			},
-			
-			loading: function(bool) {
-				$('#loading').toggle(bool);
-			}
-		});
-		
-	});
-
-</script>
-<style>
 
 	body {
 		margin: 0;
@@ -97,11 +55,12 @@ padding:15px;
 		max-width: 900px;
 		margin: 40px auto;
 		padding: 0 10px;
+		color:#000;
 	}
 
 </style>
 </head>
-	<body>
+	<body >
 
 		
 	<div class="wrapper white">
@@ -236,6 +195,7 @@ padding:15px;
 							<!-- Box Outer Layer [ Box 3 ] -->
 							<div class="box box-lg br-white animated">
 <h1 style="margin-left:10%">Calendar</h1>
+	<div id='loading'>loading...</div>
 	<div id='calendar'></div>
 								</div>
 							</div>
@@ -254,6 +214,7 @@ padding:15px;
 		<!-- Javascript files -->
 		<!-- jQuery -->
 		<script src="js/jquery.js"></script>
+		<script src="calendar/fullcalendar.min.js"></script>
 		<!-- Bootstrap JS -->
 		<script src="js/bootstrap.min.js"></script>
 		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
@@ -284,5 +245,44 @@ padding:15px;
 		<!-- Custom JS -->
 		<script src="js/custom.js"></script>
 		<!-- This Page JavaScript -->
+		<script>
+
+	$(document).ready(function() {
+	
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title'//,
+				//right: 'month,agendaWeek,agendaDay'
+			},
+			//defaultDate: '2015-02-12',
+			editable: false,
+			selectable:true,
+			eventLimit: true, // allow "more" link when too many events
+			 eventClick: function(calEvent, jsEvent, view) {
+			alert(calEvent.start);
+			var start=calEvent.start;
+			var uri="/renderevents?id="+ start;						
+					window.location.href =uri ;
+			 },
+			eventAfterRender: function (event,element, cell) {
+				if(event.title-event.NewCount>0){
+				element.find('.fc-content').append("<div style=' position: relative; width: 15px;height: 15px;float:right;background-color: #E60000;border-radius: 10px;'></div>")
+				}
+			},
+			events: {
+				url: '/getcalendar',
+				error: function() {
+					$('#script-warning').show();
+				},				
+			},
+			
+			loading: function(bool) {
+				$('#loading').toggle(bool);
+			}
+		});
+		
+	});
+</script>
 	</body>
 </html>
