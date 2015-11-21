@@ -1,30 +1,27 @@
-// var mysql = require('../DAO/dbConnectionsController');
+//var mysql = require('./dbConnectionsController');
 var worker = require('../DAO/worker');
 
 exports.homepage = function(req, res){
 	console.log("here.");
 	res.render('index');
-	// res.send("Welcome to my NodeJS App. We're going Old School!!");
-}
+};
 
 exports.workerRegister = function(req, res){
 	console.log("here.");
 	res.render('wRegister');
-	// res.send("Welcome to my NodeJS App. We're going Old School!!");
-}
+};
+
 exports.employeeRegister = function(req, res){
 	console.log("here.");
 	res.render('eregister');
-	// res.send("Welcome to my NodeJS App. We're going Old School!!");
-}
+};
 exports.eLogin = function(req, res){
 	console.log("here.");
 	res.render('eLogin');
-	// res.send("Welcome to my NodeJS App. We're going Old School!!");
-}
-
+};
 
 exports.newWorker = function(req, res){
+	console.log(req);
 	json = {};
 	json.FirstName = req.body.FirstName;
 	json.MiddleName = req.body.MiddleName;
@@ -47,15 +44,17 @@ exports.newWorker = function(req, res){
 	worker.newWorker(function(err, result){
 		if(err){
 			console.log("Error: "+err);
+			console.log(result);
 		}else{
 			console.log("NOTHING.");
+			console.log(result);
 		}
 	},res, json, skID);
-}
+};
 
 exports.aHome = function(req, res){
 	res.render('aHome');
-}
+};
 
 exports.getWorker = function(req,res){
 	if(req.body.WorkerID!= null){
@@ -70,10 +69,10 @@ exports.getWorker = function(req,res){
 	}else{
 		res.send("Invalid WorkerID.")
 	}
-}
+};
 exports.getDashboard = function(req,res){
 	res.render("dashboard");
-}
+};
 
 exports.getWorkers = function(req, res){
 	worker.getWorkers(req, res, function(err, result){
@@ -84,4 +83,5 @@ exports.getWorkers = function(req, res){
 			res.render('someWebpage');
 		}
 	});
-}
+};
+

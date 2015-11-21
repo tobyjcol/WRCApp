@@ -13,7 +13,7 @@ exports.getWorkers = function(req,res){
 				res.send({res:rows});
 			}
 		});
-}
+};
 
 exports.getWorkerDetails = function(WorkerID) {	
 		var connection=mysql.getConnection();
@@ -65,8 +65,7 @@ exports.newWorker = function (callback, res, json, skID) {
 			});
 		}
 	});
-
-}
+};
 
 exports.editWorker = function(callback, json){
 	var connection=mysql.getConnection();
@@ -81,7 +80,7 @@ exports.editWorker = function(callback, json){
 			console.log("Level 1");
 		}
 	});	
-}
+};
  
 exports.deleteWorker = function(callback, WorkerID){
 	var connection=mysql.getConnection();
@@ -96,4 +95,4 @@ exports.deleteWorker = function(callback, WorkerID){
 			console.log("Level 1");
 		}
 	});	
-}
+};

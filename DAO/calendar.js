@@ -1,4 +1,5 @@
 var mysql = require('./dbConnectionsController');
+
 exports.getCalendarView = function(callback,res){
 	var connection=mysql.getConnection();
 	var query = connection.query("select sum(jobscount) as title,JobDate as start,sum(NewCount)" +

@@ -1,14 +1,15 @@
 var ejs= require('ejs');
 var mysql = require('mysql');
-function getConnection(){	
+
+function getConnection(){
 	var connection=mysql.createConnection({
-	    host     : 'samaritan.cqsrraflln0o.us-west-1.rds.amazonaws.com',
-	    user     : 'samaritan',
-	    password : 'samaritan',
-	    database : 'WorkerResourceCenter',
+	    host	 : 'aws-sh-db01.cqsrraflln0o.us-west-1.rds.amazonaws.com',
+		user     : 'shadmin',
+		password : 'sh!admin!123',
+	    database : 'WRC',
 	    port     : '3306'
 	});
 	return connection;
 	}
 	
-	exports.getConnection=getConnection;
+exports.getConnection=getConnection;
