@@ -4,7 +4,8 @@ exports.employerLogin = function(req, res){
 	var connection=mysql.getConnection();
 	var query = connection.query("Select * from LoginInfo where UserName = ? and Password=? ",[req.body.UserName, req.body.Password] , function(err, result){
 		if (err) {
-			console.log("Error: "+err);								
+			console.log("Error: "+err);
+			connection.end();
 		} 
 		else{
 			if((result[0].UserName == req.body.UserName) && (result[0].Password == req.body.UserName)){

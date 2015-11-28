@@ -1,112 +1,115 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-
-<title>Worker Registration</title>
-<meta name="description" content="Samaritan House">
-<meta name="keywords" content="Samaritan House">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="img/favicon.ico" />
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-</head>
-
-<body>
-<div class="wrapper white">
- <div class="header">
-  <div class="header-navigation">
-   <div class="container">
-    <div class="row">
-     <div class="col-md-4">
-      <div class="logo">
-        <h1><i class="fa fa-home"></i> Samaritan House</h1>
-      </div>
-     </div>
-    </div>
-   </div>
-</div>
-
-<br/>
-<br/>
-<br/>
-
-
-<div class="login-card">
-  <h1 class="h1RegTitle"><b>Worker Registration Form</b></h1><br>
-  <form  style="margin-left:10%;" action="/newWorker" method="post">
-    <input class="formTextColor" type="text" id="FirstName"  name="FirstName" placeholder="First Name">
-    <input type="text" id="MiddleName" name="MiddleName"placeholder="Middle Name">
-    <input type="text" id="LastName" name="LastName" placeholder="Last Name">
-    <br/>
-    <br/>
-    <input type="text" id="Address1" name="Address1" placeholder="Address #1" size="32">
-    <input type="text" id="Address2" name="Address2" placeholder="Address #2" size="31">
-    <br/>
-    <br/>
-    <input type="text" id="City" name="City" placeholder="City">
-    <input type="text" id="State" name="State" placeholder="State">
-    <input type="text" id="Zip" name="Zip" placeholder="Zip">
-    <br/>
-    <br/>
-    <input type="tel" id="Phone" name="Phone" placeholder="Phone" size="65">
-    <br/>
-    <br/>
-    <input type="email" id="Email" name="Email" placeholder="Email" size="65">
-    <br/>
-    <br/>
-    <input type="text" id="SSN" name="SSN" required placeholder="SSN-###-##-####" size="65"/>
-<br/>
-<br/>
-<label class="textFormColor" for="dob"><b>Date of Birth</b></label>
- <input type="date" id="DOB" name="DOB" required size="65"/>
-
-<br/>
-<br/>
-<label class="textFormColor" for="ethnicity"><b>Ethnicity</b></label>
-<select id="Ethnicity" name="Ethnicity" width="100px">
-    <option value="mixedrace">Mixed Race</option>
-    <option value="arctic">Arctic</option>
-    <option value="european">Caucasian (European)</option>
-    <option value="indian">Caucasian (Indian)</option>
-    <option value="middleeast">Caucasian (Middle East)</option>
-    <option value="african">Caucasian (North African, Other)</option>
-    <option value="australian">Indigenous Australian</option>
-    <option value="american">Native American</option>
-    <option value="asian">North East Asian</option>
-    <option value="pacific">Pacific (Polynesian, Micronesian, etc)</option>
-    <option value="southeast">South East Asian </option>
-    <option value="westafrican">West African, Bushmen, Ethiopian</option>
-    <option value="otherrace">Other Race</option>
-</select>
-<br/>
-<br/>
-<label class="textFormColor" for="jsns"><b>Active Worker</b></label>
-<select id="JobSeeker" name="JobSeeker">
-    <option value="yes">Yes</option>
-    <option value="no">No</option>
-</select>
-<br/>
-<br/>
-<label class="textFormColor" for="jsns"><b>Skills</b></label>
-<select id="Skills" onclick="" name="Skills">
-    <option value="1">1</option>
-    <option></option>
-</select><br/>
-<br/>
-    <input type="submit" name="login" class="regButtonFS login login-submit" value="Register">
-  </form>
-
-</div>
-
-
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/waypoints.min.js"></script>
-		<script src="js/respond.min.js"></script>
-		<script src="js/html5shiv.js"></script>
-		<script src="js/custom.js"></script>
-	</div></body>
+    <head>
+        <title>Worker Registration</title>
+        <meta name="description" content="Samaritan House" />
+        <meta name="keywords" content="Samaritan House" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/img/favicon.ico" />
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    </head>
+    <body>
+    <div class="wrapper white">
+        <div class="header">
+            <div class="header-navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="logo">
+                                <h1><i class="fa fa-home"></i> Samaritan House</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <div class="login-card">
+                <h1 class="h1RegTitle"><b>Worker Registration Form</b></h1><br>
+                <form  style="margin-left:10%;" action="/v1/wrc/newWorker" method="post">
+                    <input class="formTextColor" type="text" id="FirstName"  name="FirstName" placeholder="First Name">
+                    <input type="text" id="MiddleName" name="MiddleName"placeholder="Middle Name">
+                    <input type="text" id="LastName" name="LastName" placeholder="Last Name">
+                    <br/>
+                    <br/>
+                    <input type="text" id="Address1" name="Address1" placeholder="Address #1" size="32">
+                    <input type="text" id="Address2" name="Address2" placeholder="Address #2" size="31">
+                    <br/>
+                    <br/>
+                    <input type="text" id="City" name="City" placeholder="City">
+                    <input type="text" id="State" name="State" placeholder="State">
+                    <input type="text" id="Zip" name="Zip" placeholder="Zip">
+                    <br/>
+                    <br/>
+                    <input type="tel" id="Phone" name="Phone" placeholder="Phone" size="65">
+                    <br/>
+                    <br/>
+                    <input type="email" id="Email" name="Email" placeholder="Email" size="65">
+                    <br/>
+                    <br/>
+                    <input type="text" id="SSN" name="SSN" required placeholder="SSN-###-##-####" size="65"/>
+                    <br/>
+                    <br/>
+                    <label class="textFormColor" for="dob"><b>Date of Birth</b></label>
+                    <input type="date" id="DOB" name="DOB" required size="65"/>
+                    <br/>
+                    <br/>
+                    <label class="textFormColor" for="ethnicity"><b>Ethnicity</b></label>
+                    <select id="Ethnicity" name="Ethnicity" width="100px">
+                        <option value="mixedrace">Mixed Race</option>
+                        <option value="arctic">Arctic</option>
+                        <option value="european">Caucasian (European)</option>
+                        <option value="indian">Caucasian (Indian)</option>
+                        <option value="middleeast">Caucasian (Middle East)</option>
+                        <option value="african">Caucasian (North African, Other)</option>
+                        <option value="australian">Indigenous Australian</option>
+                        <option value="american">Native American</option>
+                        <option value="asian">North East Asian</option>
+                        <option value="pacific">Pacific (Polynesian, Micronesian, etc)</option>
+                        <option value="southeast">South East Asian </option>
+                        <option value="westafrican">West African, Bushmen, Ethiopian</option>
+                        <option value="otherrace">Other Race</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label class="textFormColor" for="jsns"><b>Active Worker</b></label>
+                    <select id="JobSeeker" name="JobSeeker">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <label class="textFormColor" for="jsns"><b>Skills: </b></label>
+                    <select id="Skill_1" onclick="" name="Skill_1">
+                        <option value="None">None</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Gardening">Gardening</option>
+                    </select>
+                    <select id="Skill_2" onclick="" name="Skill_2">
+                        <option value="None">None</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Gardening">Gardening</option>
+                    </select>
+                    <select id="Skill_3" onclick="" name="Skill_3">
+                        <option value="None">None</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Carpentry">Carpentry</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Gardening">Gardening</option>
+                    </select>
+                    <br/>
+                    <br/>
+                    <input type="submit" name="login" class="regButtonFS login login-submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </body>
 </html>

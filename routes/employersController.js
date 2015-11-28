@@ -1,20 +1,18 @@
 var mysql = require('./dbConnectionsController');
 var employer = require('../DAO/employer');
 //var bcrypt = require('./bCrypt');
-function encryptPassword(pwd)
-{
+
+function encryptPassword(pwd)  {
 	//var bcrypt = require('bcryptjs');
 	var salt = bcrypt.genSaltSync(10);
 	var hash = bcrypt.hashSync(pwd, salt);	
 	return hash;
 }
+
 exports.employer = function(req, res){
 	console.log("here.");
 	res.render('eregister');
-	// res.send("Welcome to my NodeJS App. We're going Old School!!");
 };
-
-
 
 exports.newEmployer = function(req, res){
 	var json = {};
@@ -33,14 +31,15 @@ exports.newEmployer = function(req, res){
 	json.EmployerID="";
 	//json.UserName=req.body.userid;
 	//json.Password=req.body.password;
-		UserName=req.body.userid;
-		Password=req.body.password;
+	UserName=req.body.userid;
+	Password=req.body.password;
+
 	employer.newEmployer(function(err, result){
-		if(err){
-			console.log("Error: "+err);
-		}else{
+		if (!err) {
 			console.log("NOTHING.");
 			res.render('eHome');
+		} else {
+			console.log("Error: " + err);
 		}
 	},res, json,UserName,Password);
 
@@ -117,33 +116,33 @@ exports.empRegister = function(callback, json) {
 		var connection=mysql.getConnection();
 		
 		var query = connection.query("INSERT INTO connections set ? ", json , function(err, r){
-			if (err) {
-				res.error=err;									
-			} 
-			else {		
+			if (!err) {
 
-				connection.query("select MAX(id) as id from WorkerInfo "), function(err, results){
-					if(err){
-						console.log("Sleep!!!");
+				connection.query("select MAX(id) as id from WorkerInfo "), function (err, results) {
+					if (!err) {
 
-					}else{
-
-						connection.query("INSERT INTO UserSkills set ? ", {WorkerID: results, SkillID: json.SkillID} , function(err, rows){
-							if (err) {
-								res.error=err;									
-							} 
-							else {
+						connection.query("INSERT INTO UserSkills set ? ", {
+							WorkerID: results,
+							SkillID: json.SkillID
+						}, function (err, rows) {
+							if (!err) {
 								res.setHeader('Set-Cookie', req.session.id);
-								res.send({"msg":"successfully inserted"});	
+								res.send({"msg": "successfully inserted"});
+							} else {
+								res.error = err;
 							}
 						});
+					} else {
+						console.log("Sleep!!!");
 					}
-				}	
+				}
+			} else {
+				res.error = err;
 			}
 			connection.end();	
 		});
 	// }else{
-}
+};
 //	}
 }; 
 

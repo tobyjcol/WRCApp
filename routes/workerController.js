@@ -1,28 +1,23 @@
-//var mysql = require('./dbConnectionsController');
 var worker = require('../DAO/worker');
 
 exports.homepage = function(req, res){
-	console.log("here.");
 	res.render('index');
 };
 
 exports.workerRegister = function(req, res){
-	console.log("here.");
 	res.render('wRegister');
 };
 
 exports.employeeRegister = function(req, res){
-	console.log("here.");
 	res.render('eregister');
 };
 exports.eLogin = function(req, res){
-	console.log("here.");
 	res.render('eLogin');
 };
 
 exports.newWorker = function(req, res){
-	console.log(req);
 	json = {};
+	skills = {};
 	json.FirstName = req.body.FirstName;
 	json.MiddleName = req.body.MiddleName;
 	json.LastName = req.body.LastName;
@@ -38,18 +33,18 @@ exports.newWorker = function(req, res){
 	json.Ethnicity = req.body.Ethnicity;
 	json.JobSeeker = req.body.JobSeeker;
 	json.WorkerStatus = req.body.WorkerStatus;
-	//json.SkillID = 1;//req.body.SkillID;
-	skID = 1;
+	json.Skill_1 = req.body.Skill_1;
+	json.Skill_2 = req.body.Skill_2;
+	json.Skill_3 = req.body.Skill_3;
 
 	worker.newWorker(function(err, result){
-		if(err){
-			console.log("Error: "+err);
-			console.log(result);
-		}else{
-			console.log("NOTHING.");
+		if (!err) {
+
+		} else {
+			console.log("Error: " + err);
 			console.log(result);
 		}
-	},res, json, skID);
+	},res, json, skills);
 };
 
 exports.aHome = function(req, res){
@@ -70,6 +65,7 @@ exports.getWorker = function(req,res){
 		res.send("Invalid WorkerID.")
 	}
 };
+
 exports.getDashboard = function(req,res){
 	res.render("dashboard");
 };

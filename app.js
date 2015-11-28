@@ -50,15 +50,17 @@ app.get('/renderevents',calendarController.renderEvents);
 app.get('/jobdescription',calendarController.getJobDescription);
 
 app.get('/v1/wrc/employer',employersController.employer);
-app.post('/newEmployer',employersController.newEmployer);
+app.post('/v1/wrc/newEmployer',employersController.newEmployer);
 /*app.post('/editEmployer',employersController.editEmployer)
 app.post('/deleteEmployer',employersController.deleteEmployer)*/
 
 
-//app.get('/getWorkerInfo', controller.getWorkerInfo);
-app.post('/newWorker', workerController.newWorker);
-//app.post('/register',controller.register);
 app.get('/v1/wrc/workers',workerController.getWorkers);
+//app.get('/v1/wrc/workers/:id',workerController.getWorker);
+app.post('/v1/wrc/newWorker' , workerController.newWorker);
+//app.put('/v1/wrc/workers/:id', workerController.updateWorker);
+//app.post('/register',controller.register);
+
 app.get('/dashboard',workerController.getDashboard);
 
 // Job API's
