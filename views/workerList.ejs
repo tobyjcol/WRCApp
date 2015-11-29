@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Samaritan House</title>
+    <meta name="description" content="Samaritan House">
+    <meta name="keywords" content="Samaritan House">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="/js/jquery.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div>
+                <div class="logo">
+                    <h1><i class="fa fa-home"></i> Samaritan House</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blah">
+        <script>
+            $.getJSON( "/v1/wrc/workers", function(results) {
+                console.log("Number Results:" + results.res.length);
+                var i = 0;
+                while (i < results.res.length) {
+                    $("#blah").append("<div class='row'><div class='col-md-9'>" + results.res[i].FirstName + " " + results.res[i].LastName + "</div><div class='col-md-3'>Edit Delete</div>");
+                    i++;
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
+
+

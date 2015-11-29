@@ -31,12 +31,8 @@ exports.getWorkerDetails = function(WorkerID) {
 
 exports.newWorker = function (callback, res, json) {
 	var connection=mysql.getConnection();
-
-	var query = connection.query("INSERT INTO WorkerInfo set ? ",json, function(err, r){
+	connection.query("INSERT INTO WorkerInfo set ? ",json, function(err, r){
 		if (!err) {
-			console.log(res);
-			//TODO: Make this redirect to to the right place.
-			//res.redirect('/wRegister');
 			res.render('aFirst');
 			connection.end();
 

@@ -6,8 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var workerController = require('./routes/workerController');
-var employersController=require('./routes/employersController');
-var calendarController=require('./routes/calendarController');
+var employersController = require('./routes/employersController');
+var calendarController = require('./routes/calendarController');
 var jobInfo = require('./routes/jobsController');
 var skillsList = require('./routes/skillsController');
 var login = require('./routes/loginController');
@@ -20,7 +20,6 @@ var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,POST');
     res.header('Access-Control-Allow-Headers', '*');
-
     next();
 };
 
@@ -39,7 +38,8 @@ app.use(allowCrossDomain);
 app.set('port', 8000);
 
 app.get('/',workerController.homepage);
-app.get('/wRegister',workerController.workerRegister);
+app.get('/workerRegistration',workerController.workerRegister);
+app.get('/workerList' , workerController.workerList);
 app.get('/eregister',workerController.employeeRegister);
 app.post('/login',login.employerLogin);
 app.get('/aHome', workerController.aHome);
@@ -59,6 +59,7 @@ app.get('/v1/wrc/workers',workerController.getWorkers);
 //app.get('/v1/wrc/workers/:id',workerController.getWorker);
 app.post('/v1/wrc/newWorker' , workerController.newWorker);
 //app.put('/v1/wrc/workers/:id', workerController.updateWorker);
+app.del('/v1/wrc/workers/:id', wokerController.deleteWorker);
 //app.post('/register',controller.register);
 
 app.get('/dashboard',workerController.getDashboard);

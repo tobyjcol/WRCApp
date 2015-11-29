@@ -5,7 +5,11 @@ exports.homepage = function(req, res){
 };
 
 exports.workerRegister = function(req, res){
-	res.render('wRegister');
+	res.render('workerRegistration');
+};
+
+exports.workerList = function(req, res){
+	res.render('workerList');
 };
 
 exports.employeeRegister = function(req, res){
@@ -76,8 +80,13 @@ exports.getWorkers = function(req, res){
 			console.log("Error: "+err);
 		}else{
 			console.log("Success!!");
-			res.render('someWebpage');
+			console.log(res);
+			//res.render('someWebpage');
 		}
 	});
+};
+
+exports.deleteWorker = function(req,res){
+	res.render("delete someone");
 };
 
