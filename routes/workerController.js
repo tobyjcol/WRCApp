@@ -76,17 +76,11 @@ exports.getDashboard = function(req,res){
 
 exports.getWorkers = function(req, res){
 	worker.getWorkers(req, res, function(err, result){
-		if(err){
-			console.log("Error: "+err);
-		}else{
+		if (!err) {
 			console.log("Success!!");
 			console.log(res);
-			//res.render('someWebpage');
+		} else {
+			console.log("Error: " + err);
 		}
 	});
 };
-
-exports.deleteWorker = function(req,res){
-	res.render("delete someone");
-};
-

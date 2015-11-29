@@ -23,13 +23,20 @@
             </div>
         </div>
     </div>
-    <div id="blah">
+    <div id="workersList">
+        <div id="row" class="text-right">
+            <div id="col-md-12" >
+                <button type="button" class="btn btn-primary-outline">Edit</button>
+                <button type="button" class="btn btn-primary-outline">Delete</button>
+            </div>
+        </div>
         <script>
             $.getJSON( "/v1/wrc/workers", function(results) {
-                console.log("Number Results:" + results.res.length);
+                console.log("Number Workers:" + results.res.length);
+                console.log(results);
                 var i = 0;
                 while (i < results.res.length) {
-                    $("#blah").append("<div class='row'><div class='col-md-9'>" + results.res[i].FirstName + " " + results.res[i].LastName + "</div><div class='col-md-3'>Edit Delete</div>");
+                    $("#workersList").append("<div class='row'><div class='col-md-9'><input type='checkbox' value=" + results.res[i].WorkerID + ">" + results.res[i].FirstName + " " + results.res[i].LastName +"</div><div class='col-md-3'></div>");
                     i++;
                 }
             });

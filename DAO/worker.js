@@ -58,10 +58,9 @@ exports.editWorker = function(callback, json){
 
 exports.deleteWorker = function(callback, WorkerID){
 	var connection=mysql.getConnection();
-	//Change Query.
 	var query = connection.query("DELETE from WorkerInfo where WorkerID= ? ",WorkerID, function(err, r){
 		if (!err) {
-			console.log("Level 1");
+			console.log("User Deleted!");
 		} else {
 			console.log("Error: " + r);
 			connection.end();
