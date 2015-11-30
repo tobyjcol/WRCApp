@@ -12,9 +12,6 @@ exports.workerList = function(req, res){
 	res.render('workerList');
 };
 
-exports.employeeRegister = function(req, res){
-	res.render('eregister');
-};
 exports.eLogin = function(req, res){
 	res.render('eLogin');
 };
