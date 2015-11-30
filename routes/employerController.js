@@ -1,25 +1,40 @@
-var mysql = require('./dbConnectionsController');
-var employer = require('../DAO/employer');
+//var mysql = require('./dbConnectionsController');
 //var bcrypt = require('./bCrypt');
+var employer = require('../DAO/employer');
 
-function encryptPassword(pwd)  {
+function encryptPassword(pwd) {
 	//var bcrypt = require('bcryptjs');
 	var salt = bcrypt.genSaltSync(10);
 	var hash = bcrypt.hashSync(pwd, salt);	
 	return hash;
 }
 
-exports.employer = function(req, res){
-	console.log("here.");
-	res.render('eregister');
+exports.employerList = function(req, res){
+	res.render('employerList');
 };
 
-exports.newEmployer = function(req, res){
+exports.employerRegistration = function(req, res){
+	res.render('employerRegistration');
+};
+
+exports.getEmployers = function(req, res){
+	employer.getEmployers(req, res, function(err, result){
+		if (!err) {
+			console.log("Success!!");
+			console.log(res);
+			console.log(result);
+		} else {
+			console.log("Error: " + err);
+		}
+	});
+};
+
+exports.newEmployer = function(req, res) {
 	var json = {};
 	json.FirstName = req.body.fname;
 	json.MiddleName = req.body.mname;
 	json.LastName = req.body.lname;
-	json.Company = req.body.company;		
+	json.Company = req.body.company;
 	json.Address1 = req.body.address1;
 	json.Address2 = req.body.address2;
 	json.City = req.body.city;
@@ -27,49 +42,43 @@ exports.newEmployer = function(req, res){
 	json.Zip = req.body.zip;
 	json.Phone = req.body.phone;
 	json.Email = req.body.email;
-	json.DriverLicense=req.body.dlid;
-	json.EmployerID="";
+	json.DriverLicense = req.body.dlid;
+	json.EmployerID = "";
 	//json.UserName=req.body.userid;
 	//json.Password=req.body.password;
-	UserName=req.body.userid;
-	Password=req.body.password;
+	UserName = req.body.userid;
+	Password = req.body.password;
 
-	employer.newEmployer(function(err, result){
+	employer.newEmployer(function (err, result) {
 		if (!err) {
 			console.log("NOTHING.");
 			res.render('eHome');
 		} else {
 			console.log("Error: " + err);
 		}
-	},res, json,UserName,Password);
-
-exports.employers = function(json) {
-//	if(cookiesHash.id == req.session.id){	
-		var connection=mysql.getConnection();
-		var query = connection.query("select * from EmployerInfo ",
-				function(err, rows) {
-			connection.end();
-			if (err) {
-				console.log(err);
-				//cstmError.mySqlException(err, res);					
-				//cstmError.throwException('Something went wrong.',res);
-			} else {
-				res.setHeader('Set-Cookie', req.session.id);
-				res.send({res:rows});
-			}
-		});
-	// }else{
-
-	// }
-
+	}, res, json, UserName, Password);
 };
 
-exports.editEmployer=function(req, res){
+//exports.getEmployers = function(json) {
+//	if(cookiesHash.id == req.session.id){
+//	var connection=mysql.getConnection();
+//	var query = connection.query("select * from EmployerInfo ", function(err, rows) {
+//		connection.end();
+//		if (!err) {
+			//res.setHeader('Set-Cookie', req.session.id);
+////			res.send({res: rows});
+	//	} else {
+	//		console.log(err);
+	//	}
+//	});
+//};
+
+/*exports.editEmployer=function(req, res){
 	var json = {};
 	json.FirstName = req.body.fname;
 	json.MiddleName = req.body.mname;
 	json.LastName = req.body.lname;
-	json.Company = req.body.company;		
+	json.Company = req.body.company;
 	json.Address1 = req.body.address1;
 	json.Address2 = req.body.address2;
 	json.City = req.body.city;
@@ -86,10 +95,10 @@ exports.editEmployer=function(req, res){
 			console.log("NOTHING.");
 		}
 	},res, json);
-};
+};*/
 
 
-exports.deleteEmployer=function(req, res){
+/*exports.deleteEmployer=function(req, res){
 	var EmployerID=req.body.EmployerID;
 	employer.deleteEmployer(function(err, result){
 		if(err){
@@ -98,20 +107,9 @@ exports.deleteEmployer=function(req, res){
 			console.log("NOTHING.");
 		}
 	},res, EmployerID);
-};
+};*/
 
-exports.getEmployers = function(req, res){
-	employer.getEmployers( function(err, result){
-		if(err){
-			console.log("Error: "+err);
-		}else{
-			console.log("Success!!");
-			res.render('someWebpage');
-		}
-	},res);
-};
-
-exports.empRegister = function(callback, json) {	
+/*exports.empRegister = function(callback, json) {
 //	if(cookiesHash.id == req.session.id){
 		var connection=mysql.getConnection();
 		
@@ -144,5 +142,9 @@ exports.empRegister = function(callback, json) {
 	// }else{
 };
 //	}
-}; 
+}; */
 
+/*exports.employer = function(req, res) {
+ console.log("here.");
+ res.render('eregister');
+ };*/
