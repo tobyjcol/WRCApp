@@ -40,13 +40,13 @@ app.set('port', 8000);
 
 app.get('/home',appController.home);
 
-app.get('/',workerController.homepage);
+app.get('/',appController.homepage);
 app.get('/workerRegistration',workerController.workerRegister);
 app.get('/workerList',workerController.workerList);
-app.get('/employerList',employerController.employerList);
 app.get('/employerRegistration',employerController.employerRegistration);
+app.get('/employerList',employerController.employerList);
 app.post('/login',loginController.adminLogin);
-app.get('/aHome',workerController.aHome);
+app.get('/admin',appController.WRCAdmin);
 
 
 ///app.get('/v1/wrc/calendar',calendarController.showCalendar);
@@ -55,7 +55,7 @@ app.get('/aHome',workerController.aHome);
 //app.get('/jobdescription',calendarController.getJobDescription);
 
 app.get('/v1/wrc/employers',employerController.getEmployers);
-//app.post('/v1/wrc/newEmployer',employerController.newEmployer);
+app.post('/v1/wrc/newEmployer',employerController.newEmployer);
 /*app.post('/editEmployer',employersController.editEmployer)
 app.post('/deleteEmployer',employersController.deleteEmployer)*/
 

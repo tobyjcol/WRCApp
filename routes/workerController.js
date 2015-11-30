@@ -1,9 +1,5 @@
 var worker = require('../DAO/worker');
 
-exports.homepage = function(req, res){
-	res.render('index');
-};
-
 exports.workerRegister = function(req, res){
 	res.render('workerRegistration');
 };
@@ -46,10 +42,6 @@ exports.newWorker = function(req, res){
 			console.log(result);
 		}
 	},res, json, skills);
-};
-
-exports.aHome = function(req, res){
-	res.render('aHome');
 };
 
 exports.getWorker = function(req,res){
