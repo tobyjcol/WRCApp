@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>WRCApp-parent</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+<<<<<<< HEAD
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+=======
+>>>>>>> 3395c5cc12e632d61d47c958d19ce991365f34af
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+<<<<<<< HEAD
+		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+>>>>>>> 3395c5cc12e632d61d47c958d19ce991365f34af
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+	</natures>
+</projectDescription>
