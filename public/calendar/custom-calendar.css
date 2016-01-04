@@ -1,0 +1,23 @@
+.fc-content{
+height:50px;
+text-align:center;
+vertical-align: middle;
+padding:15px;
+}
+.fc-time{display:none}
+.fc-title{
+font-size:20px;
+font-weight:bold;
+}
+.fc-flag{
+position: relative; 
+width: 20px;
+height: 20px;
+float:right;
+background-color: #E60000;
+border-radius: 10px;
+}
+
+.fc-flag-content{
+padding:2px;
+}

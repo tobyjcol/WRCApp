@@ -17,6 +17,7 @@ exports.employer = function(req, res){
 
 
 exports.newEmployer = function(req, res){
+	console.log("debug statement:"+req.body.userid);
 	var json = {};
 	json.FirstName = req.body.fname;
 	json.MiddleName = req.body.mname;

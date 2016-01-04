@@ -21,7 +21,6 @@ var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,POST');
     res.header('Access-Control-Allow-Headers', '*');
-
     next();
 }
 
@@ -29,8 +28,7 @@ var allowCrossDomain = function(req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(__dirname + '/public/favicon.ico'));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -49,6 +47,10 @@ app.get('/v1/wrc/calendar',calendarController.showCalendar);
 app.get('/getcalendar',calendarController.getCalendarView);
 app.get('/renderevents',calendarController.renderEvents);
 app.get('/jobdescription',calendarController.getJobDescription);
+app.get('/detailsToTagJob',calendarController.getDetailsToAssign);
+app.post('/tagJob',calendarController.assignJob);
+app.get('/getassignedworkers',calendarController.getAssignedWorkers);
+app.post('/updateJobAssignment',calendarController.editJobAssignment)
 
 app.get('/v1/wrc/employer',employersController.employer);
 app.post('/newEmployer',employersController.newEmployer);
@@ -66,8 +68,8 @@ app.get('/dashboard',workerController.getDashboard);
 app.get('/v1/wrc/job', jobInfo.getJobs);
 //app.post('/v1/wrc/job', jobInfo.submitJob);
 app.get('/v1/wrc/job/:id', jobInfo.getJob);
-//app.put('/v1/wrc/job/:id', jobInfo.udpateJob);
-//app.delete('/v1/wrc/job/:id', jobInfo.deleteJob);
+app.post('/v1/wrc/updatejob', jobInfo.updateJob);
+app.post('/v1/wrc/deletejob/', jobInfo.deleteJob);
 
 //Skill API's
 app.get('/v1/wrc/skills', skillsList.getSkills);

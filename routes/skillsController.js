@@ -1,25 +1,24 @@
 var mysql = require('./dbConnectionsController');
 
 exports.getSkills = function getAllSkils(req, res) {	
-	var cookiesHash = req.cookies;
-	if(cookiesHash.id == req.session.id){
+	/*var cookiesHash = req.cookies;
+	if(cookiesHash.id == req.session.id){*/
 		var connection=mysql.getConnection();
 		var query = connection.query("select * from SkillsList",
-				function(err, rows) {
-			
+				function(err, rows) {			
 			if (err) {
 				console.log(err);
 				//cstmError.mySqlException(err, res);					
 				//cstmError.throwException('Something went wrong.',res);
 			} else {
-				res.setHeader('Set-Cookie', req.session.id);
+				//res.setHeader('Set-Cookie', req.session.id);
 				res.send({res:rows});
 			}
 			connection.end();
 		});
-	}else{
+	/*}else{
 
-	}
+	}*/
 };
 
 exports.getSkill = function getSkill(req, res) {	

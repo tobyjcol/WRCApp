@@ -263,7 +263,7 @@ strong{
 /* Basic CSS ends */
 
 .container{
-	width: 95%;
+	width: 95%;	
 }
 
 .col-inner{
@@ -650,7 +650,7 @@ strong{
 }
 
 .header .navbar-nav>li>.dropdown-menu {
-	right: -1px;
+	right: 2px;
 	margin-top: 9px;
 	border-radius: 5px !important;
 }
@@ -677,7 +677,7 @@ strong{
 }
 
 .header .navbar-default .navbar-nav > li ul.dropdown-sm{
-	width: 500px;
+	width: 180px;
 }
 
 .header .navbar-default .navbar-nav > li ul.dropdown-sm,
@@ -892,9 +892,12 @@ strong{
 	height: 200px;
 }
 
-.box.box-lg{
-	height: 600px;
-}
+ .box.box-lg{
+/* 	height: 600px; */
+color:#000;
+padding-top:20px;
+
+} 
 
 .pull-up{
 	margin-top: -200px;
@@ -4304,3 +4307,5 @@ div.ppt {
 		margin-bottom: 30px;
 	}
 }
+
+

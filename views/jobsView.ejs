@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Samaritan House</title>
+<meta name="description" content="Samaritan House">
+<meta name="keywords" content="Samaritan House">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon"  href="/img/favicon.ico">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+ <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+<style>
+		#modalheader-page{
+	/*margin-left:5px;
+	margin-right:5px;*/
+	background-image: url("textures/brushed-metal.png");
+  background-image: url("textures/brushed-metal.png"),-webkit-linear-gradient(top,#337ab7 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),-moz-linear-gradient(top,#337ab7 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),-o-linear-gradient(top,#337ab7 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),linear-gradient(to bottom,#337ab7 0,#212a33 100%);
+  background-position: 50% 50%;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color:#fff;
+	}
+	#header-page{
+	background-image: url("textures/brushed-metal.png");
+  background-image: url("textures/brushed-metal.png"),-webkit-linear-gradient(top,#2f3640 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),-moz-linear-gradient(top,#2f3640 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),-o-linear-gradient(top,#2f3640 0,#212a33 100%);
+  background-image: url("textures/brushed-metal.png"),linear-gradient(to bottom,#2f3640 0,#212a33 100%);
+  background-position: 50% 50%;
+  background-color: #212a33;
+  border-color: #171e28;
+  color:#fff;
+  }
+.item-header{
+ font-weight: bold;
+ width:30%;
+}
+.custom_align{
+	font-weight:bold;
+}
+.col-header{
+font-weight: bold;
+vertical-align:middle;
+}
+.row-header{
+margin-top:10px;
+margin-bottom:10px;
+}
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#script-warning {
+		display: none;
+		background: #eee;
+		border-bottom: 1px solid #ddd;
+		padding: 0 10px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 12px;
+		color: red;
+	}
+
+.status-symbol{
+float:right;
+margin-right:25px;
+margin-bottom:20px;
+}
+
+.jobs-table{
+margin-top: 30px;
+    width:96%;    
+    margin-left:2%;
+}
+
+</style>
+</head>
+<body >	
+<div class="wrapper white">
+ <div class="header">
+  <div class="header-navigation">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-4">
+      <div class="logo">
+        <h1><i class="fa fa-home"></i> Samaritan House</h1>
+        <!--<h3 style="margin-left:20%;">Welcome Admin!!</h3>-->
+        </div>
+	 </div>
+	 <div class="col-md-8">
+	 <!-- Bootstrap Navbar -->
+	  <nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		 <button type="button" class="navbar-toggle br-orange" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		 </button>
+		</div
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="/login" class="br-orange">
+					<!-- Link Icon -->
+					<i class="fa fa-home link-icon"></i>
+					<!-- Link Title -->
+					<span class="link-title">Home</span>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="hungry.html" class="dropdown-toggle br-blue"  data-toggle="dropdown">													<!-- Link Icon -->
+					<i class="fa fa-angle-double-down"></i>
+					<!-- Link Title -->
+					<span class="link-title">View<b class="fa fa-angle-down"></b></span>
+					</a>
+					<ul class="dropdown-menu dropdown-sm">
+						<li>
+							<div class="row">
+					
+								<div class="col-md-12">
+									<div class="col-inner">
+										<ul class="list-unstyled">
+											<li><a href="viewEmployers.html"><i class="fa fa-users"></i> View Employers</a></li>
+											<li><a href="viewJobSeekers.html"><i class="fa fa-users"></i>View Jobseekers</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="settings.html" class="dropdown-toggle br-pink"  data-toggle="dropdown">
+					<!-- Link Icon -->
+					<i class="fa fa-cogs"></i>
+					<!-- Link Title -->
+					<span class="link-title">Settings<b class="fa fa-angle-down"></b></span>
+					</a>
+					<ul class="dropdown-menu dropdown-default">
+						<li><a href="resetpw.html"><i class="fa fa-sign-out fa-fw dd-link-icon lyellow"></i>Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		 </div><!-- /.navbar-collapse -->
+	  </nav>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- Header End -->
+<!-- Inner Page Content // Start -->
+			<div class="inner-page" style="margin-top:-40px;">
+				<div class="container">
+					<!-- <div class="row">										
+						<div class="col-md-12">
+						</div>		
+					</div> -->
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<!-- Box Outer Layer [ Box 3 ] -->
+							<div class="box box-lg br-white animated">
+									<div>
+									<a class="btn btn-info" style="float:right;margin-right:25px;" href="/aHome">Calendar View</a>
+									</div>																		
+									 <div class="panel panel-primary jobs-table">
+								            <div class="panel-heading">
+								                <h3 class="panel-title">Jobs List</h3>								               
+								            </div>
+								            <%
+								            	if(jobs==undefined)
+								            	{
+								            		
+								            	}
+								            	else{ %>
+								            			
+								            <table class="table">
+								                <thead>
+								                    <tr>								                        
+								                        <th style="width:12%">Employer Name</th>
+								                         <th style="width:10%">Company</th>
+								                         <th style="width:10%">Contact</th>
+								                        <th style="width:25%">Job Title</th>
+								                        <th style="width:37%">WorkSite Address</th>								                       
+								                         <!-- <th style="width:10%">Status</th> -->
+								       					 <th style="text-align:center;width:2%"></th> 
+								       					 <th style="text-align:center;width:2%"></th>		
+								       					 <th style="text-align:center;width:2%"></th> 								       												       					                  
+								                    </tr>
+								                </thead>
+								                <tbody>
+								                <%for(item in jobs)	{
+								                	if(jobs[item].status=='New'){							            
+								            	%>
+								                    <tr style="color:#ed450c;">
+								                        <td><%=jobs[item].EmployerName%></td>
+								                         <td><%=jobs[item].Company%></td>
+								                          <td><%=jobs[item].contact%></td>
+								                        <td><%=jobs[item].Title%></td>
+								                        <td><%=jobs[item].address%></td>								                      
+								                       <!--  <td><%=jobs[item].status%></td> -->
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="View Job"><button class="btn btn-info btn-xs" id="<%=jobs[item].jobID%>"  onclick="showJobDetails(this.id)" ><i class="fa fa-eye"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="Assign Job"><button  class="btn btn-warning btn-xs" id="<%=jobs[item].jobID%>" data-title="Assign"  onclick="getDetailsToAssign(this.id)"><i class="fa fa-tag"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="Delete Job"><button class="btn btn-danger btn-xs" id="<%=jobs[item].jobID%>"  onclick="deleteJob(this.id)" ><i class="fa fa-trash"></i></button></p></td>
+    													<%}else if(jobs[item].status=='Assigned'){%>    													
+								                    <tr style="color:#337ab7;">
+								                        <td><%=jobs[item].EmployerName%></td>
+								                         <td><%=jobs[item].Company%></td>
+								                          <td><%=jobs[item].contact%></td>
+								                        <td><%=jobs[item].Title%></td>
+								                        <td><%=jobs[item].address%></td>								                      
+								                       <!--  <td><%=jobs[item].status%></td> -->
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="View Job"><button class="btn btn-info btn-xs" id="<%=jobs[item].jobID%>"  onclick="showJobDetails(this.id)" ><i class="fa fa-eye"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top"  title="Edit Job Assignment"><button class="btn btn-primary btn-xs" id="<%=jobs[item].jobID%>"  data-title="EditJobAssignment" data-toggle="modal" onclick="getDetailsToEditJobAssign(this.id)"><i class="fa fa-pencil"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="Delete Job"><button class="btn btn-danger btn-xs" id="<%=jobs[item].jobID%>"  onclick="deleteJob(this.id)" ><i class="fa fa-trash"></i></button></p></td>
+    													<%}else{%>
+    												<tr style="color:#1f7a1f;">
+								                        <td><%=jobs[item].EmployerName%></td>
+								                         <td><%=jobs[item].Company%></td>
+								                          <td><%=jobs[item].contact%></td>
+								                        <td><%=jobs[item].Title%></td>
+								                        <td><%=jobs[item].address%></td>								                      
+								                       <!--  <td><%=jobs[item].status%></td> -->
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="View Job"><button class="btn btn-info btn-xs" id="<%=jobs[item].jobID%>"  onclick="showJobDetails(this.id)" ><i class="fa fa-eye"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top"  title="Edit Job Assignment"><button class="btn btn-primary btn-xs" id="<%=jobs[item].jobID%>"  data-title="EditJobAssignment" data-toggle="modal" onclick="getDetailsToEditJobAssign(this.id)" ><i class="fa fa-pencil"></i></button></p></td>
+								                        <td style="text-align:center"><p data-placement="top" data-toggle="tooltip" title="Delete Job"><button class="btn btn-danger btn-xs" id="<%=jobs[item].jobID%>"  onclick="deleteJob(this.id)" ><i class="fa fa-trash"></i></button></p></td>
+    													<%}%>
+								                    </tr>		
+								                   <%}}%>						                
+								                </tbody>
+								            </table>								           
+								        </div>		
+										<div class="status-symbol">
+											<div style="border-radius:10px;width:15px;height:15px; background:#ed450c; border: 2px solid #ed450c; float:left;">&nbsp;&nbsp;&nbsp;</div><span style="float:left;margin-left:5px;">New</span>
+											<div style="border-radius:10px;width:15px;height:15px; background:#337ab7; border: 2px solid #337ab7; float:left;margin-left:15px;">&nbsp;&nbsp;&nbsp;</div><span style="float:left;margin-left:5px;">Assigned</span>
+											<div style="border-radius:10px;width:15px;height:15px; background:#1f7a1f; border: 2px solid #1f7a1f; float:left;margin-left:15px;">&nbsp;&nbsp;&nbsp;</div><span style="float:right;margin-left:5px;">Completed</span>
+										</div>			
+							</div>
+						</div>								
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<!-- *********************** Jobs View Modal Begins Here******************************************************************************* -->
+<div class="modal fade" id="viewmodal" tabindex="-1" role="dialog" aria-labelledby="view" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="width:60%">
+    <div class="modal-content">
+          <div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-close" aria-hidden="true"></span></button>
+        	<h4 class="modal-title custom_align" id="Heading">&nbsp;&nbsp;Job Details</h4>
+      		</div>
+          <div class="modal-body">          	
+    		<div id='job-description' style="margin-left:5px;">    		
+    			<ol class='breadcrumb' id='modalheader-page'>
+                                <li><i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Job Description</li>
+                 </ol>
+                 				<input type="hidden" id="job-id" value=""/>
+         						<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header">Job Title</div>
+	         						</div>
+	         						<div class='col-md-8'>
+	         							<div><input type='text' class='form-control'  id='job-title'></input></div>
+	         						</div>	
+	         					</div>
+	         					
+	         					<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header">Work Site Address</div>
+	         						</div>
+	         						<div class='col-md-8'>
+	         							<div><input type='text' class='form-control' id='worksite-address'></input></div>
+	         						</div>	
+	         					</div>		
+	         					<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header">Start Time</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							<div class='input-group date' style="padding:0px;" id='job-startdatediv'>
+							                    <input type='text' class="form-control" id='job-startdate' />
+							                    <span class="input-group-addon">
+							                        <span class="fa fa-calendar"></span>
+							                    </span>
+                						</div>  
+	         						</div>
+	         						
+	         						<div class='col-md-2'>
+	         							<div class="col-header">End Time</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							 <div class='input-group date' style="padding:0px;" id='job-enddatediv'>
+										                    <input type='text' class="form-control" id='job-enddate' />
+										                    <span class="input-group-addon">
+										                        <span class="fa fa-calendar"></span>
+										                    </span>
+										  </div>
+	         						</div>		     						
+	         					</div>		
+	         					<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header">Workers Required</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							<div><input type='text' class='form-control' id='workers-required'></input></div>
+	         						</div>	
+	         						<div class='col-md-2'>
+	         							<div class="col-header">Skill Required</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							<div><select id='skill-required' class='form-control'></select></div>
+	         							<!-- <div><input type='text' class='form-control' id='skill-required'></input></div> -->
+	         						</div>
+	         					</div>			
+	         				
+	         					<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header"># of Hours	</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							<div><input type='text' class='form-control' id='no-hours'></input></div>
+	         						</div>	
+	         						<div class='col-md-2'>
+	         							<div class="col-header">Pay Rate</div>
+	         						</div>
+	         						<div class='col-md-3'>
+	         							<div><input type="text" class="form-control" id='pay-rate'></input></div>
+	         						</div>
+	         					</div>	
+	         					<div class='row row-header'>
+	         						<div class='col-md-3'>
+	         							<div class="col-header">Job Description</div>
+	         						</div>
+	         						<div class='col-md-8'>
+	         							<div><textarea class='form-control' rows='5'   id="job-description">job description</textarea></div>
+	         						</div>	
+	         					</div>			         				
+    		</div>
+    		<div id='viewmodal-content' style="margin-left:5px;">    	
+    		</div>
+          </div> 	 <!-- End of Modal Body-->
+      <div class="modal-footer ">
+        <button id="job-update" name="Update" class="btn btn-success btn-lg"><i class="fa fa-check-circle"></i>&nbsp;Update</button>
+        <button class="btn btn-primary btn-lg" data-dismiss="modal" id="close" ><i class="fa fa-times-circle"></i>&nbsp;Close</button>
+      </div>
+  </div> <!-- /.modal-content --> 
+   
+  </div> <!-- /.modal-dialog --> 
+     
+    </div> <!-- /.modal-fade --> 
+ <!-- *********************** Jobs View Modal Ends Here******************************************************************************* -->    
+    
+    
+    
+    
+<!-- *********************** Assign Job Modal Begins Here******************************************************************************* -->    
+    <div class="modal fade" id="assignjobmodal" tabindex="-1" role="dialog" aria-labelledby="view" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="width:60%">
+    <div class="modal-content">
+          <div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-close" aria-hidden="true"></span></button>
+        	<h4 class="modal-title custom_align" id="Heading">&nbsp;&nbsp;Assign Job</h4>
+      		</div>
+          <div class="modal-body">          	
+    		<div id='assignjobmodal-content' style="margin-left:5px;"> 
+             	   <input type="hidden" id="assignjob-id" value=""/>   
+             	    <input type="hidden" id="workers-count" value=""/>               	       		
+         			<div id='jobassign-details' style="margin-left:7px;"></div>
+         			<div id='assignjob-sworkers' style="margin-left:7px;"></div>  
+         			<div id='assignjob-oworkers' style="margin-left:7px;"></div>    	
+         			<div id='error-assignjob' style="margin-left:7px;" ></div>	        				 				
+    		</div>    		
+          </div> 	 <!-- End of Modal Body-->
+      <div class="modal-footer ">
+        <button id="job-assign" name="AssignJob" class="btn btn-success btn-lg"><i class="fa fa-check-circle"></i>&nbsp;Assign Job</button>
+        <button class="btn btn-primary btn-lg" data-dismiss="modal" id="close" ><i class="fa fa-times-circle"></i>&nbsp;Close</button>
+      </div>
+  </div> <!-- /.modal-content -->   
+  </div> <!-- /.modal-dialog -->      
+    </div> <!-- /.modal-fade --> 
+ <!-- *********************** Assign Job Modal Ends Here******************************************************************************* -->    
+	
+    
+<!-- *********************** Edit Job Assignment Modal Begins Here******************************************************************************* -->    
+    <div class="modal fade" id="edit-jobassign-modal" tabindex="-1" role="dialog" aria-labelledby="view" aria-hidden="true">
+      <div class="modal-dialog modal-lg" style="width:60%">
+    <div class="modal-content">
+          <div class="modal-header">
+        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="fa fa-close" aria-hidden="true"></span></button>
+        	<h4 class="modal-title custom_align" id="Heading">&nbsp;&nbsp;Edit Job Assignment</h4>
+      		</div>
+          <div class="modal-body">          	
+    		<div id='edit-jobassign-content' style="margin-left:5px;"> 
+             	   <input type="hidden" id="edit-jobassign-id" value=""/>   
+             	    <input type="hidden" id="edit-workers-count" value=""/>               	       		
+         			<div id='edit-jobassign-details' style="margin-left:7px;"></div>
+         			<div id='edit-jobassign-sworkers' style="margin-left:7px;"></div>  
+         			<div id='edit-jobassign-oworkers' style="margin-left:7px;"></div>    	
+         			<div id='error-edit-jobassign' style="margin-left:7px;" ></div>	        				 				
+    		</div>    		
+          </div> 	 <!-- End of Modal Body-->
+      <div class="modal-footer ">
+        <button id="edit-job-assign" name="EditAssignJob" class="btn btn-success btn-lg"><i class="fa fa-check-circle"></i>&nbsp;Update Job Assignment</button>
+        <button class="btn btn-primary btn-lg" data-dismiss="modal" id="close" ><i class="fa fa-times-circle"></i>&nbsp;Close</button>
+      </div>
+  </div> <!-- /.modal-content -->   
+  </div> <!-- /.modal-dialog -->      
+    </div> <!-- /.modal-fade --> 
+ <!-- *********************** Edit Job Assignment Modal Ends Here******************************************************************************* -->    
+	
+		<!-- Javascript files -->
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<script src="calendar/fullcalendar.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+		<!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+		<script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
+		<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
+		<!-- Masonry JS -->
+		<script src="js/masonry.pkgd.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<!-- Cycle JS -->
+		<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+		<!-- jQuery flot -->
+		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+		<script src="js/jquery.flot.min.js"></script>
+		<script src="js/jquery.flot.resize.min.js"></script>
+		<!-- Count To JS  -->
+		<script src="js/jquery.countTo.js"></script>
+		<!-- jQuery way points -->
+		<script src="js/waypoints.min.js"></script>
+		<!-- jQuery prettyPhoto & Isotope -->
+		<script src="js/jquery.prettyPhoto.js"></script>
+		<script src="js/isotope.js"></script>
+		<!-- Jquery for Countdown  -->
+		<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="js/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="js/custom.js"></script>
+		<!-- This Page JavaScript -->
+		
+<script>
+function showJobDetails(id)
+{		
+	 $.ajax({		
+	 	 			method: 'get',
+					url: '/v1/wrc/skills'					
+		 	})
+		  .success(function(response){			  		
+		  	   if(response.res!=undefined)
+		  	   {
+		  	   		var skills=response.res;
+		  	   		for(x in skills)
+		  	   		{		  	   			
+		  	   		 	var optionName=skills[x].SkillType;
+		  	   		 	var optionValue=skills[x].SkillID;
+		  	   		 	var option = new Option(optionName, optionValue);
+		  	   			$('#skill-required').append($(option));
+		  	   		}
+		  	   }					
+			})
+		  .error(function(error){
+			 alert("Something Went Wrong in the Application");					
+	 });	 		  
+	$('#viewmodal').modal('show');
+	$('#viewmodal-content').empty();
+	   $.ajax({		
+	 	 			method: 'get',
+					url: '/jobdescription',
+					data: { "jobid":id}
+				})
+		  .success(function(response){	
+						if(response.jobdetails!=undefined)
+						{
+								var details=response.jobdetails[0];
+								/*To Set Modal Values*/
+								$("#job-id").val(details.JobID);
+								$("#job-title").val(details.Title);												
+								$("#worksite-address").val(details.WorkSiteAddress);
+								$("#job-startdate").datetimepicker("update", new Date(details.StartDate));	
+								$("#job-enddate").datetimepicker("update", new Date(details.EndDate));								
+								$("#workers-required").val(details.NoWorkers);
+								$("#skill-required").val(details.skillrequired);		
+								$("#no-hours").val(details.NoHours);	
+								$("#pay-rate").val(details.PayRate);
+								$("textarea#job-description").val(details.Description);	
+								$('#viewmodal-content').append("<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Job Details"+
+	                                 "</li>"+
+	     						"</ol>"+
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Full Name</div>"+
+	         						"<div class='col-md-3'>"+details.fullName +"</div>"+
+	         						"<div class='col-md-3 col-header'>Address Line1</div>"+
+	         						"<div class='col-md-3'>"+details.Address1 +"</div>"+	         							         						
+	         					"</div>"+	 
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Company Name</div>"+
+	         						"<div class='col-md-3'>"+details.Company+"</div>"+	         						
+	         						"<div class='col-md-3 col-header'>Address Line2</div>"+
+	         						"<div class='col-md-3'>"+details.Address2+"</div>"+	    						        						
+	         					"</div>"+        						
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Employer Contact</div>"+
+	         						"<div class='col-md-3'>"+details.employerContact +"</div>"+
+	         						"<div class='col-md-3 col-header'>City</div>"+
+	         						"<div class='col-md-3'>"+details.City +"</div>"+
+	         					"</div>"+	
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Employer Email</div>"+
+	         						"<div class='col-md-3'>"+details.Email+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>State</div>"+
+	         						"<div class='col-md-3'>"+details.State+"</div>"+	         						
+	         					"</div>"+
+	         					"<div class='row row-header' >"+
+	         						"<div class='col-md-3 col-header'>Employer Driving License</div>"+
+	         						"<div class='col-md-3'>"+details.DriverLicense+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>Zip</div>"+
+	         						"<div class='col-md-3'>"+details.Zip+"</div>"+	    							         						
+	         					"</div>");				
+						}	
+						else
+						{
+							$('#viewmodal-content').append("<div class='alert alert-warning'>"+
+ 								" <strong>Server Info: </strong> No Job Details Found For This Job."+
+								"</div>");
+						}									
+			})
+		  .error(function(error){											
+	      });	
+}  // End of JobDetails Function
+
+function getDetailsToAssign(id)
+{			 		  
+	$('#assignjobmodal').modal('show');	
+	$('#jobassign-details').empty();
+	$('#assignjob-sworkers').empty();
+	$('#assignjob-oworkers').empty();
+	$('#error-assignjob').empty();
+	 $.ajax({		
+	 	 			method: 'get',
+					url: '/detailsToTagJob',
+					data: { "jobid":id}
+				})
+		  .success(function(response){	
+		  				
+						if(response.jobDetails!=undefined)
+						{		
+							var details=response.jobDetails[0];
+							$("#assignjob-id").val(details.JobID);	
+							$('#workers-count').val(details.NoWorkers);															
+							$('#jobassign-details').append("<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Employer Details"+
+	                                 "</li>"+
+	     						"</ol>"+
+	     						"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Full Name</div>"+
+	         						"<div class='col-md-3'>"+details.fullName+"</div>"+
+	         						"<div class='col-md-3 col-header'>Company Name</div>"+
+	         						"<div class='col-md-3'>"+details.Company+"</div>"+	         							         						
+	         					"</div>"+	 
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Employer Contact</div>"+
+	         						"<div class='col-md-3'>"+details.employerContact+"</div>"+	         						
+	         						"<div class='col-md-3 col-header'>Employer Email</div>"+
+	         						"<div class='col-md-3'>"+details.Email+"</div>"+	    						        						
+	         					"</div>"+
+	         					"<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Job Description"+
+	                                 "</li>"+   
+	                            "</ol>"+						
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Job title</div>"+
+	         						"<div class='col-md-9'>"+details.Title+"</div>"+	
+	         						     						
+	         					"</div>"+	
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Job Description</div>"+
+	         						"<div class='col-md-9'>"+details.Description+"</div>"+	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Work Site Address</div>"+
+	         						"<div class='col-md-9'>"+details.WorkSiteAddress+"</div>"+	         						
+	         					"</div>"+	
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Start Date</div>"+
+	         						"<div class='col-md-3'>"+(new Date(details.StartDate)).toLocaleString()+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>End Date</div>"+
+	         						"<div class='col-md-3'>"+(new Date(details.EndDate)).toLocaleString()+"</div>"+	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+
+	         						 "<div class='col-md-3 col-header'># of Workers</div>"+
+	         						"<div class='col-md-3'>"+details.NoWorkers+"</div>"+
+	         						"<div class='col-md-3 col-header'># of Hours</div>"+
+	         						"<div class='col-md-3'>"+details.NoHours+"</div>"+  	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+	         					
+	         						"<div class='col-md-3 col-header'>Skill required</div>"+
+	         						"<div class='col-md-3'>"+details.skillName+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>Pay Rate</div>"+
+	         						"<div class='col-md-3'>"+details.PayRate+"</div>"+	    							         						
+	         					"</div>");	    			
+	         						
+						}	
+						else
+						{							
+							$('#jobassign-details').append("<div class='alert alert-warning'>"+
+ 								" <strong>Server Info: </strong> No Job Details Found For This Job."+
+								"</div>");
+						}					
+						if(response.skilledWorkers!=undefined)
+						{			
+							var	skilledWorkers=response.skilledWorkers;							
+							$('#assignjob-sworkers').append("<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Select Workers"+
+	                                 "</li>"+   
+	                            "</ol>"+
+	                            "<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Skilled Workers</div>"+
+	         						"<div class='col-md-8'>  <select class='form-control' id='sb-skilledworkers' name='sb-skilledworkers' multiple>"+	         							
+	         						"</select></div>"+     						       						
+	         					"</div>");
+							for(worker in skilledWorkers)
+	         				{
+	         					var optionName=skilledWorkers[worker].FullName;
+		  	   		 			var optionValue=skilledWorkers[worker].WorkerID;
+		  	   		 			var option = new Option(optionName, optionValue);
+		  	   					$('#sb-skilledworkers').append($(option));
+	         				}
+						}		
+						else{
+							$('#assignjob-sworkers').append("<div class='alert alert-info'>"+
+ 								" <strong>No Workers Found For This Skill</strong> "+
+								"</div>");
+						}	
+						if(response.otherWorkers!=undefined)
+						{							
+							var	otherWorkers=response.otherWorkers;
+							$('#assignjob-oworkers').append("<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Other Workers</div>"+
+	         						"<div class='col-md-8'><select class='form-control' name='sb-otherworkers' id='sb-otherworkers' multiple >"+	         							
+	         						+"</select></div>"+     						       						
+	         					"</div>");
+							for(worker in otherWorkers)
+	         				{
+	         					var optionName=otherWorkers[worker].FullName;
+		  	   		 			var optionValue=otherWorkers[worker].WorkerID;
+		  	   		 			var option = new Option(optionName, optionValue);
+		  	   					$('#sb-otherworkers').append($(option));
+	         				}
+						}						
+			})
+		  .error(function(error){
+											
+	      });	
+}  // End of getDetailsToAssign Function
+
+function getDetailsToEditJobAssign(id)
+{			 		  
+	$('#edit-jobassign-modal').modal('show');	
+	$('#edit-jobassign-details').empty();
+	$('#edit-jobassign-sworkers').empty();
+	$('#edit-jobassign-oworkers').empty();
+	$('#error-edit-jobassign').empty();	
+	 $.ajax({		
+	 	 			method: 'get',
+					url: '/detailsToTagJob',
+					data: { "jobid":id}
+				})
+		  .success(function(response){			  				
+						if(response.jobDetails!=undefined)
+						{		
+							
+							var details=response.jobDetails[0];
+							$("#edit-jobassign-id").val(details.JobID);	
+							$('#edit-workers-count').val(details.NoWorkers);															
+							$('#edit-jobassign-details').append("<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Employer Details"+
+	                                 "</li>"+
+	     						"</ol>"+
+	     						"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Full Name</div>"+
+	         						"<div class='col-md-3'>"+details.fullName+"</div>"+
+	         						"<div class='col-md-3 col-header'>Company Name</div>"+
+	         						"<div class='col-md-3'>"+details.Company+"</div>"+	         							         						
+	         					"</div>"+	 
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Employer Contact</div>"+
+	         						"<div class='col-md-3'>"+details.employerContact+"</div>"+	         						
+	         						"<div class='col-md-3 col-header'>Employer Email</div>"+
+	         						"<div class='col-md-3'>"+details.Email+"</div>"+	    						        						
+	         					"</div>"+
+	         					"<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Job Description"+
+	                                 "</li>"+   
+	                            "</ol>"+						
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Job title</div>"+
+	         						"<div class='col-md-9'>"+details.Title+"</div>"+	
+	         						     						
+	         					"</div>"+	
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Job Description</div>"+
+	         						"<div class='col-md-9'>"+details.Description+"</div>"+	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Work Site Address</div>"+
+	         						"<div class='col-md-9'>"+details.WorkSiteAddress+"</div>"+	         						
+	         					"</div>"+	
+	         					"<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Start Date</div>"+
+	         						"<div class='col-md-3'>"+(new Date(details.StartDate)).toLocaleString()+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>End Date</div>"+
+	         						"<div class='col-md-3'>"+(new Date(details.EndDate)).toLocaleString()+"</div>"+	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+
+	         						 "<div class='col-md-3 col-header'># of Workers</div>"+
+	         						"<div class='col-md-3'>"+details.NoWorkers+"</div>"+
+	         						"<div class='col-md-3 col-header'># of Hours</div>"+
+	         						"<div class='col-md-3'>"+details.NoHours+"</div>"+  	         						
+	         					"</div>"+
+	         					"<div class='row row-header'>"+	         					
+	         						"<div class='col-md-3 col-header'>Skill required</div>"+
+	         						"<div class='col-md-3'>"+details.skillName+"</div>"+	 
+	         						"<div class='col-md-3 col-header'>Pay Rate</div>"+
+	         						"<div class='col-md-3'>"+details.PayRate+"</div>"+	    							         						
+	         					"</div>"+
+	         						"<div class='row row-header'>"+
+	         						 "<div class='col-md-3 col-header'>Job Status</div>"+
+	         						"<div class='col-md-8'> <select class='form-control' id='sb-edit-status' name='sb-edit-status'>"+	
+									"<option value='New'>New</option>"+
+	         						"<option value='Assigned'>Assigned</option>"+   
+	         						"<option value='Completed'>Completed</option>"+	         						      							
+	         						"</select></div>"+  	         						         						
+	         					"</div>"); 	         					
+	         				$('#sb-edit-status').val(details.Status); 			
+	         						
+						}	
+						else
+						{							
+							$('#edit-jobassign-details').append("<div class='alert alert-warning'>"+
+ 								" <strong>Server Info: </strong> No Job Details Found For This Job."+
+								"</div>");
+						}					
+						if(response.skilledWorkers!=undefined)
+						{			
+							var	skilledWorkers=response.skilledWorkers;							
+							$('#edit-jobassign-sworkers').append("<ol class='breadcrumb' id='modalheader-page'>"+
+	                                " <li>"+
+	                                " <i class='fa fa-plus-circle'></i>&nbsp;&nbsp;Select Workers"+
+	                                 "</li>"+   
+	                            "</ol>"+
+	                            "<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Skilled Workers</div>"+
+	         						"<div class='col-md-8'>  <select class='form-control' id='sb-edit-skilledworkers' name='sb-edit-skilledworkers' multiple>"+	         							
+	         						"</select></div>"+     						       						
+	         					"</div>");
+							for(worker in skilledWorkers)
+	         				{
+	         					var optionName=skilledWorkers[worker].FullName;
+		  	   		 			var optionValue=skilledWorkers[worker].WorkerID;
+		  	   		 			var option = new Option(optionName, optionValue);
+		  	   					$('#sb-edit-skilledworkers').append($(option));
+	         				}
+						}		
+						else{
+							$('#assignjob-sworkers').append("<div class='alert alert-info'>"+
+ 								" <strong>No Workers Found For This Skill</strong> "+
+								"</div>");
+						}	
+						if(response.otherWorkers!=undefined)
+						{							
+							var	otherWorkers=response.otherWorkers;
+							$('#edit-jobassign-oworkers').append("<div class='row row-header'>"+
+	         						"<div class='col-md-3 col-header'>Other Workers</div>"+
+	         						"<div class='col-md-8'><select class='form-control' name='sb-edit-otherworkers' id='sb-edit-otherworkers' multiple >"+	         							
+	         						+"</select></div>"+     						       						
+	         					"</div>");
+							for(worker in otherWorkers)
+	         				{
+	         					var optionName=otherWorkers[worker].FullName;
+		  	   		 			var optionValue=otherWorkers[worker].WorkerID;
+		  	   		 			var option = new Option(optionName, optionValue);
+		  	   					$('#sb-edit-otherworkers').append($(option));
+	         				}
+		         			/* Ajax call to get assigned Workers */
+		         			var jobid=$("#edit-jobassign-id").val();			         			
+		         				$.ajax({		
+							 	 			method: 'get',
+											url: '/getassignedworkers',
+											data: { "jobid":jobid}
+										})
+								  .success(function(response){								  					  	
+								  				if(response.workers!=undefined)
+								  				{		
+								  					var workers=[];
+								  					for(x in response.workers)	
+								  					{
+								  						workers.push(response.workers[x].WorkerID);
+								  					}		  					
+								  					$('#sb-edit-otherworkers').val(workers);
+								  					$('#sb-edit-skilledworkers').val(workers);
+								  				}
+								  				else{
+								  					alert('No Workers Assigned');
+								  				}		
+									})
+								  .error(function(error){							  			
+											alert("something Went Wrong While Updating Job");						
+							      });		  
+							/* End of Ajax call  */ 	         		      				
+						}						
+			})
+		  .error(function(error){
+											
+	      });	
+}  // End of getDetailsToEditJobAssign  Function
+
+function deleteJob(id)
+{
+
+			$.ajax({		
+	 	 			method: 'post',
+					url: '/v1/wrc/deletejob',
+					data:{id:id}					
+				})
+		  .success(function(response){			  	
+		  		if(response.res=="Success"){				
+				alert("Job Deleted");	
+				}
+				else{
+				alert("Job Not Deleted");
+				}	
+				location.reload(true);				
+			})
+		  .error(function(error){		  			
+					alert("something Went Wrong While Updating Job");						
+	      });	
+
+
+}
+
+
+$(document).ready(function(){
+	$('#job-update').click(function(){		
+		var jobId=$("#job-id").val();
+		var Title=$("#job-title").val();												
+		 var WorkSiteAddress=$("#worksite-address").val();
+		var startdate=$("#job-startdate").val();	
+		var enddate=$("#job-enddate").val();		
+		if(startdate>enddate)
+		{
+			alert("End Time Must be Greater Than Start Time");
+			return;
+		}						
+		var workers=$("#workers-required").val();
+		var skill=$("#skill-required").val();		
+		var hours=$("#no-hours").val();	
+		var payrate=$("#pay-rate").val();
+		var description=$("textarea#job-description").val();
+		$.ajax({		
+	 	 			method: 'post',
+					url: '/v1/wrc/updatejob',
+					data: { "JobID":jobId,"Title":Title,"WorkSiteAddress":WorkSiteAddress,"StartDate":startdate,"EndDate":enddate,"NoWorkers":workers,"SkillID":skill,"NoHours":hours,"PayRate":payrate,"Description":description}
+				})
+		  .success(function(response){			  	
+		  		if(response.res=="Success"){
+				$('#viewmodal').modal('hide');
+				alert("Job Updated");	
+				}
+				else{
+				alert("Job Details Not Updated");
+				}	
+				location.reload(true);				
+			})
+		  .error(function(error){
+		  			$('#viewmodal').modal('hide');
+					alert("something Went Wrong While Updating Job");						
+	      });			
+			
+	}); // End of Job Update
+	 
+	$('#job-assign').click(function(){		
+		$('#error-assignjob').empty();		
+		var skilledworkers = $("#sb-skilledworkers").val() || [];
+		var otherworkers= $("#sb-otherworkers").val() || [];
+		var actualcount= $("#workers-count").val();	
+		if((skilledworkers.length+otherworkers.length)>parseInt(actualcount))
+		{
+			$('#error-assignjob').append("<div class='alert alert-danger'>"+
+ 								" <strong>Selected More Workers Than Required</strong>"+
+								"</div>");	
+			$("#sb-skilledworkers").find('option').removeAttr("selected");
+			$('#sb-otherworkers').find('option').removeAttr("selected");
+			return;
+		}
+		else if((skilledworkers.length+otherworkers.length)<parseInt(actualcount)){			
+			$('#error-assignjob').append("<div class='alert alert-danger'>"+
+ 								" <strong>Selected Less Workers Than Required</strong>"+
+								"</div>");
+			$("#sb-skilledworkers").find('option').removeAttr("selected");
+			$('#sb-otherworkers').find('option').removeAttr("selected");
+			return;
+		}
+		else{
+			var jobid=$("#assignjob-id").val();		
+			var workers=JSON.stringify(skilledworkers.concat(otherworkers));			
+			$.ajax({		
+	 	 			method: 'post',
+					url: '/tagJob',
+					data: { 'jobid':jobid,'workers':workers}
+				})
+		  .success(function(response){			 	  	
+		  		if(response.res=="Success"){
+				$('#assignjobmodal').modal('hide');
+				alert("Job Assigned");	
+				}
+				else{
+				alert("Job  Not Assigned");
+				}	
+				location.reload(true);			
+			})
+		  .error(function(error){
+		  			$('#assignjobmodal').modal('hide');
+					alert("something Went Wrong While Updating Job");					
+	      });	
+	    }
+	}); // End of Job Assign
+	
+		$('#edit-job-assign').click(function(){		
+		$('#error-edit-jobassign').empty();		
+		var skilledworkers = $("#sb-edit-skilledworkers").val() || [];
+		var otherworkers= $("#sb-edit-otherworkers").val() || [];
+		var actualcount= $("#edit-workers-count").val();	
+		if((skilledworkers.length+otherworkers.length)>parseInt(actualcount))
+		{
+			$('#error-edit-jobassign').append("<div class='alert alert-danger'>"+
+ 								" <strong>Selected More Workers Than Required</strong>"+
+								"</div>");	
+			$("#sb-edit-skilledworkers").find('option').removeAttr("selected");
+			$('#sb-edit-otherworkers').find('option').removeAttr("selected");
+			return;
+		}
+		else if((skilledworkers.length+otherworkers.length)<parseInt(actualcount)){			
+			$('#error-edit-jobassign').append("<div class='alert alert-danger'>"+
+ 								" <strong>Selected Less Workers Than Required</strong>"+
+								"</div>");
+			$("#sb-edit-skilledworkers").find('option').removeAttr("selected");
+			$('#sb-edit-otherworkers').find('option').removeAttr("selected");
+			return;
+		}
+		else{
+			var jobId=$("#edit-jobassign-id").val();		
+			var assignedWorkers=JSON.stringify(skilledworkers.concat(otherworkers));
+			var jobStatus=$('#sb-edit-status').val();
+			$.ajax({		
+	 	 			method: 'post',
+					url: '/updateJobAssignment',
+					data: { 'jobid':jobId,'workers':assignedWorkers,'status':jobStatus}
+				})
+		  .success(function(response){			 	  	
+		  		if(response.res=="Success"){
+				$('#edit-jobassign-modal').modal('hide');				
+				alert("Job Assignment Updated");					
+				}
+				else{
+				alert("Job Assignment Not Updated");
+				}	
+				location.reload(true);			
+			})
+		  .error(function(error){
+		  			$('#edit-jobassign-modal').modal('hide');
+					alert("something Went Wrong While Updating Job");					
+	      });	
+	    }
+	}); // End of Edit Job Assignment
+	
+	
+	
+}); // End of Document Ready
+ 
+</script>
+ <script type="text/javascript">
+		 $(function () {
+		  $('#job-startdatediv').datetimepicker();
+		  $('#job-enddatediv').datetimepicker();
+		   });
+   </script>
+</body>
+</html>
+

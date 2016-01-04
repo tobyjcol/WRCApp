@@ -1,4 +1,4 @@
-var mysql = require('./dbConnectionsController');
+	var mysql = require('./dbConnectionsController');
 //var bcrypt = require('./bCrypt');
 
 exports.employers=function getEmployerDetails(req, res,summary) {	
@@ -19,9 +19,9 @@ exports.employers=function getEmployerDetails(req, res,summary) {
 exports.newEmployer = function (callback, res, json,UserName,Password) {	
 	var connection=mysql.getConnection();	
 	//var encpassword=encryptPassword(Password);
-	var query = connection.query("INSERT INTO LoginInfo set ? ",{UserName:UserName,Password:Password,RolesID:2}, function(err, r){
+	var query = connection.query("INSERT INTO logininfo set ? ",{UserName:UserName,Password:Password,RolesID:2}, function(err, r){
 		if (err) {
-			console.log("Error: " + r);		
+			console.log("Error while inserting Employer Info: " + err);		
 			connection.end();								
 		} 
 		else {		

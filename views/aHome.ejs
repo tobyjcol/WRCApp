@@ -5,25 +5,16 @@
 <meta name="description" content="Samaritan House">
 <meta name="keywords" content="Samaritan House">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon"  href="/img/favicon.ico">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/font-awesome.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link href="calendar/lib/cupertino/jquery-ui.min.css"  rel='stylesheet' />
 <link href="calendar/fullcalendar.css" rel='stylesheet' />
 <link href="calendar/fullcalendar.print.css" rel='stylesheet' media='print' />
+<link href="calendar/custom-calendar.css" rel='stylesheet' />
 <script src="calendar/lib/moment.min.js"></script>
-
-
 <style>
-
-.fc-content{
-height:50px;
-font-size:18px;
-text-align:center;
-vertical-align: middle;
-padding:15px;
-}
-.fc-time{display:none}
-
 
 	body {
 		margin: 0;
@@ -52,7 +43,7 @@ padding:15px;
 	}
 
 	#calendar {
-		max-width: 900px;
+		max-width: 80%;		
 		margin: 40px auto;
 		padding: 0 10px;
 		color:#000;
@@ -60,10 +51,8 @@ padding:15px;
 
 </style>
 </head>
-	<body >
-
-		
-	<div class="wrapper white">
+<body >	
+<div class="wrapper white">
  <div class="header">
   <div class="header-navigation">
    <div class="container">
@@ -71,145 +60,101 @@ padding:15px;
      <div class="col-md-4">
       <div class="logo">
         <h1><i class="fa fa-home"></i> Samaritan House</h1>
-        <h3 style="margin-left:20%;">Welcome Admin!!</h3>
-
+        <!--<h3 style="margin-left:20%;">Welcome Admin!!</h3>-->
         </div>
-							</div>
-							<div class="col-md-9">
-								<!-- Bootstrap Navbar -->
-								<nav class="navbar navbar-default" role="navigation">
-									<!-- Brand and toggle get grouped for better mobile display -->
-									<div class="navbar-header">
-										<button type="button" class="navbar-toggle br-orange" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-											<span class="sr-only">Toggle navigation</span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-											<span class="icon-bar"></span>
-										</button>
-									</div>
-									<!-- Collect the nav links, forms, and other content for toggling -->
-									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-										<ul class="nav navbar-nav navbar-right">
-											<li>
-												<a href="index.html" class="br-orange">
-													<!-- Link Icon -->
-													<i class="fa fa-home link-icon"></i>
-													<!-- Link Title -->
-													<span class="link-title">Home</span>
-												</a>
-											</li>
-
-
-											<li class="dropdown">
-												<a href="hungry.html" class="dropdown-toggle br-blue"  data-toggle="dropdown">
-													<!-- Link Icon -->
-													<i class="fa fa-angle-double-down"></i>
-													<!-- Link Title -->
-													<span class="link-title">View<b class="fa fa-angle-down"></b></span>
-												</a>
-												<ul class="dropdown-menu dropdown-sm">
-													<li>
-														<div class="row">
-															<div class="col-md-6">
-																<div class="col-inner col-disable">
-																	<h4 class="br-orange"><i class="fa fa-share heading-icon"></i>Scope</h4>
-																	<p>View Feedback</p>
-																	<p>View Rating</p>
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="col-inner">
-																	<ul class="list-unstyled">
-																		<li><a href="viewEmployers.html"><i class="fa fa-users"></i> View Employers</a></li>
-																		<li><a href="viewJobSeekers.html"><i class="fa fa-users"></i>View Jobseekers</a></li>
-																	</ul>
-																</div>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</li>
-											<li class="dropdown">
-												<a href="settings.html" class="dropdown-toggle br-pink"  data-toggle="dropdown">
-													<!-- Link Icon -->
-													<i class="fa fa-cogs"></i>
-													<!-- Link Title -->
-													<span class="link-title">Settings<b class="fa fa-angle-down"></b></span>
-												</a>
-												<ul class="dropdown-menu dropdown-default">
-													<li><a href="resetpw.html"><i class="fa fa-sign-out fa-fw dd-link-icon lyellow"></i>Logout</a></li>
-
-												</ul>
-											</li>
-
+	 </div>
+	 <div class="col-md-8">
+	 <!-- Bootstrap Navbar -->
+	  <nav class="navbar navbar-default" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+		 <button type="button" class="navbar-toggle br-orange" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		 </button>
+		</div
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="/login" class="br-orange">
+					<!-- Link Icon -->
+					<i class="fa fa-home link-icon"></i>
+					<!-- Link Title -->
+					<span class="link-title">Home</span>
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="hungry.html" class="dropdown-toggle br-blue"  data-toggle="dropdown">													<!-- Link Icon -->
+					<i class="fa fa-angle-double-down"></i>
+					<!-- Link Title -->
+					<span class="link-title">View<b class="fa fa-angle-down"></b></span>
+					</a>
+					<ul class="dropdown-menu dropdown-sm">
+						<li>
+							<div class="row">
+					
+								<div class="col-md-12">
+									<div class="col-inner">
+										<ul class="list-unstyled">
+											<li><a href="viewEmployers.html"><i class="fa fa-users"></i> View Employers</a></li>
+											<li><a href="viewJobSeekers.html"><i class="fa fa-users"></i>View Jobseekers</a></li>
 										</ul>
-									</div><!-- /.navbar-collapse -->
-								</nav>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Header End -->
-
-
-				<!-- Inner Page Content // Start -->
-
-			<div class="inner-page">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3">
-							<!-- Inner Page Content Sidebar -->
-							<div class="page-sidebar">
-								<!-- Sidebar Links -->
-								<div class="sidebar-link col-disable">
-									<!-- Search Box -->
-									<div class="search">
-										<form>
-											<div class="input-group">
-												<input type="text" class="form-control" placeholder="Text to search">
-												<span class="input-group-btn">
-													<button class="btn" type="button"><i class="fa fa-search"></i></button>
-												</span>
-											</div>
-										</form>
 									</div>
-									<ul class="list-unstyled">
-										<li><a href="index.html" class="animated">Home <i class="fa fa-angle-double-right"></i></a></li>
-										<li><a href="view.html" class="animated">View<i class="fa fa-angle-double-right"></i></a></li>
-										<li><a href="settings.html" class="animated">Settings <i class="fa fa-angle-double-right"></i></a></li>
-									</ul>
 								</div>
 							</div>
-						</div>
-						<!-- Main-bar Column -->
-						<div class="col-md-9">
-							<div class="page-mainbar pricing">
-								<!-- Heading -->
-
-								<!-- Heading -->
-								<h3>Assign Jobs</h3>
-								<!-- Other Plans Item -->
-								<div class="row">
-								<div class="col-md-9 col-sm-12">
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="settings.html" class="dropdown-toggle br-pink"  data-toggle="dropdown">
+					<!-- Link Icon -->
+					<i class="fa fa-cogs"></i>
+					<!-- Link Title -->
+					<span class="link-title">Settings<b class="fa fa-angle-down"></b></span>
+					</a>
+					<ul class="dropdown-menu dropdown-default">
+						<li><a href="resetpw.html"><i class="fa fa-sign-out fa-fw dd-link-icon lyellow"></i>Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		 </div><!-- /.navbar-collapse -->
+	  </nav>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+<!-- Header End -->
+<!-- Inner Page Content // Start -->
+			<div class="inner-page" style="margin-top:-40px;">
+				<div class="container">
+				<!-- 	<div class="row">					
+						Main-bar Column
+							<div class="col-md-9">
+								<div class="page-mainbar pricing">
+									Heading
+									Heading
+									<h3>Assign Jobs</h3>
+									Other Plans Item									
+								</div>
+							</div>		
+					</div> -->
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
 							<!-- Box Outer Layer [ Box 3 ] -->
-							<div class="box box-lg br-white animated">
-<h1 style="margin-left:10%">Calendar</h1>
-	<div id='loading'>loading...</div>
-	<div id='calendar'></div>
-								</div>
+							<div class="box box-lg br-white animated">													
+								<div id='loading'>loading...</div>
+								<div id='calendar'></div>
 							</div>
-								
-                                               </div>
-											</div>
-										</div>
-									
-							
-						</div>
+						</div>								
 					</div>
 				</div>
 			</div>
-
+		</div>
+</div>
 
 		<!-- Javascript files -->
 		<!-- jQuery -->
@@ -247,9 +192,9 @@ padding:15px;
 		<!-- This Page JavaScript -->
 		<script>
 
-	$(document).ready(function() {
-	
+	$(document).ready(function() {	
 		$('#calendar').fullCalendar({
+			theme:true,
 			header: {
 				left: 'prev,next today',
 				center: 'title'//,
@@ -259,15 +204,14 @@ padding:15px;
 			editable: false,
 			selectable:true,
 			eventLimit: true, // allow "more" link when too many events
-			 eventClick: function(calEvent, jsEvent, view) {
-			alert(calEvent.start);
+			 eventClick: function(calEvent, jsEvent, view) {			
 			var start=calEvent.start;
 			var uri="/renderevents?id="+ start;						
 					window.location.href =uri ;
 			 },
 			eventAfterRender: function (event,element, cell) {
-				if(event.title-event.NewCount>0){
-				element.find('.fc-content').append("<div style=' position: relative; width: 15px;height: 15px;float:right;background-color: #E60000;border-radius: 10px;'></div>")
+				if(parseInt(event.NewCount)>0){				
+				element.find('.fc-content').append("<div class='fc-flag'><span class='fc-flag-content'>"+event.NewCount+"</span></div>")
 				}
 			},
 			events: {
@@ -275,8 +219,7 @@ padding:15px;
 				error: function() {
 					$('#script-warning').show();
 				},				
-			},
-			
+			},			
 			loading: function(bool) {
 				$('#loading').toggle(bool);
 			}
@@ -286,3 +229,4 @@ padding:15px;
 </script>
 	</body>
 </html>
+
